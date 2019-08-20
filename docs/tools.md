@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Tools used
+title: Tools Used
 permalink: /tools/
 --- 
 # List of tools used for development
@@ -11,3 +11,6 @@ permalink: /tools/
 - [Bash Shell Scripting](https://www.gnu.org/software/bash/)
 - [Jekyll](https://jekyllrb.com/)
 - [Github Hosting](https://pages.github.com/)
+- [Apache Maven](https://maven.apache.org/)
+- [Intellij](https://www.jetbrains.com/idea/)
+- [Apache Ant](https://ant.apache.org/)

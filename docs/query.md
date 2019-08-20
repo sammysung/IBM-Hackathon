@@ -3,55 +3,47 @@ layout: single
 title: Sample Queries
 permalink: /query/
 ---
-# Right-click on the below link in order to download this in a file:
+# Download the files here!
 
-[query list](/query.txt)
+<a href="BigQuery.txt" download>Master Query List</a>
 
-## Sample query list
+<a href="safe.txt" download>Sample Safe Query List</a>
 
-select Fname, Lname, Ssn
-from EMPLOYEE
-where Dno=5;
+<a href="AlternateEncoding.txt" download>Alternate Encoding Attacks</a>
 
-select Fname, Lname, Ssn
-from EMPLOYEE,
-where Salary > 30000;
+<a href="Illogical.txt" download>Illogical Attacks</a>
 
-select Fname, Lname, Ssn
-from EMPLOYEE
-where Dno=5 and Sex='M';
+<a href="Inference.txt" download>Inference Attacks</a>
 
-select Dname
-from EMPLOYEE, DEPARTMENT
-where Dno=Dnumber
-group by Dname
-having avg(Salary)>30000;
+<a href="Piggyback.txt" download>Piggyback Attacks</a>
 
-select Fname, Lname
-from EMPLOYEE
-where Dno = (select Dno
-from EMPLOYEE
-where Salary = (select max(Salary)
-from EMPLOYEE));
+<a href="StoredProcAsPiggy.txt" download>Stored Procedures as Piggyback Attacks</a>
 
-select Fname, Lname, Ssn
-from EMPLOYEE
-where Dno=5 or 1=1;
+<a href="StoredProcedure.txt" download>Stored Procedure Attacks</a>
 
-select Fname, Lname, Ssn
-from EMPLOYEE
-where Dno=5 and Sex='M' or 1=1;
+<a href="Tautology.txt" download>Tautology Attacks</a>
 
-select Fname, Lname
-from EMPLOYEE
-where Dno=5  '; drop table EMPLOYEE';
+<a href="Union.txt" download>Union Attacks</a>
 
-select Fname, Lname, Ssn
-from EMPLOYEE,
-where Salary > 30000 ';SHUTDOWN; -- ';
+# These links will open in your browser by default, for quick viewing.
+# Right-click on the below links in order to download these files:
 
-select Fname, Lname
-from EMPLOYEE
-where Salary > 15000
-UNION ALL select Ssn
-from FMOLOYEE;
+[Master Query List](/BigQuery.txt)
+
+[Sample Safe Query List](/safe.txt)
+
+[Alternate Encoding Attacks](/AlternateEncoding.txt)
+
+[Illogical Attacks](/Illogical.txt)
+
+[Inference Attacks](/Inference.txt)
+
+[Piggyback Attacks](/Piggyback.txt)
+
+[Stored Procedures as Piggyback Attacks](/StoredProcAsPiggy.txt)
+
+[Stored Procedure Attacks](/StoredProcedure.txt)
+
+[Tautology Attacks](/Tautology.txt)
+
+[Union Attacks](/Union.txt)

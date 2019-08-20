@@ -10,9 +10,9 @@ permalink: /com/
 
 As of this writing, the JAR file must be run from the command line due to a lack of an implemented GUI.
 Because of this, simply double-clicking the JAR will appear to make it crash.
-This also means that the code will only work on Linux, Mac, or Windows (if you take the time to add the proper PATH variable, go to [this page](/start/) if you need help) from within the respective CLI.
+This also means that the code will only work on Linux, Mac, or Windows (if you take the time to add the proper PATH variable, go to [this page](/SQLI/setup/#Pathing) if you need help) from within the respective CLI.
 
-With the integration with CMake as a build utility, rudimentary support for exporting to IDEs have been enabled. While Eclipse is not working as expected so far, Visual Studio solution files have been created and confirmed working.
+Maven works from both a command line interface and from a IDE standpoint, as long as one takes the time to setup the IDE with the proper options. Refer to the [Configuration section](/SQLI/setup/#Config) for more help with this. 
 
 ## First run
 
@@ -34,7 +34,7 @@ _Runs the default options, except that the filename for the test query file is d
 
 _Runs the default options, except that the program will prompt for the user to input an output filename during program execution._
 
-`java -jar frame.jar -ftdow query.txt safe.txt test.txt`
+`java -jar frame.jar -fdow query.txt test safe.txt`
 
-_Runs the Positive Tainting test, while also taking the first argument as the input filename, the second as the safety checking code, and the third as the output filename, while overwriting it without asking if found. Note that **-f** and **-d** run in order of definition, while **-o** will always run last._
+_Takes the first argument as the input filename, the second as the root output filename, and the third as the safe query list, while overwriting it without asking if found. Note that order of the **-f**, **-d**, and **-o** options does not matter; the input name, then the root filename, and then the safe query list file will be read in that order every time._
  
